@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floral Fresh - Estilo Amazon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(135deg, #101820, #304352);
+      color: #fff;
+    }
+
+    .navbar {
+      padding: 12px 24px;
+      background-color: #1f2d3d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 100%;
+    }
+
+    .navbar a {
+      color: #d2fefb;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      background-color: transparent;
+    }
+
+    .navbar a:hover {
+      background-color: #00ffc866;
+    }
+
+    .search-box {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .main {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      width: 500px;
+      animation: pulse 4s infinite ease-in-out;
+      filter: drop-shadow(0 0 15px #00ffc8aa);
+      transition: transform 0.3s;
+      transform: perspective(800px) rotateX(10deg) rotateY(-10deg);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main h1 {
+        font-size: 36px;
+      }
+      .logo {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="menu-links">
+      <a href="..\Empresa\Quienes somos.HTML"><i class='bx bx-user'></i>¿Quiénes somos?</a>
+      <a href="..\Empresa\Un mundo.HTML"><i class='bx bx-globe'></i>Un mundo mejor</a>
+      <a href="..\Empresa\innovación.html"><i class='bx bx-bulb'></i>Innovación</a>
+      <a href="..\Empresa\politicas completo.html"><i class='bx bx-file'></i>Políticas</a>
+      <a href="..\Empresa\Misio.HTML"><i class='bx bx-target-lock'></i>Misión</a>
+      <a href="..\Empresa\visi.HTML"><i class='bx bx-show-alt'></i>Visión</a>
+      <a href="..\Empresa\Valores.HTML"><i class='bx bx-diamond'></i>Valores</a>
+      <a href="..\Empresa\Contac.HTML"><i class='bx bx-envelope'></i>Contacto</a>
+      <a href="..\Empresa\Vistanos.HTML"><i class='bx bx-map'></i>Visítanos</a>
+      <a href="..\Empresa\prose.HTML"><i class='bx bx-store'></i>Productos / Servicios</a>
+      <a href="..\Empresa\historia.html"><i class='bx bx-book'></i>Historia</a>
+      <a href="..\Empresa\Logotipo.Html"><i class='bx bx-image'></i>Logotipo</a>
+      <a href="..\Empresa\de2.HTML"><i class='bx bx-cart'></i>Carrito de compras</a>
+      <a href="..\Empresa\Produccion.HTML"><i class='bx bx-rocket'></i>Produccion/Producto</a>
+      <a href="..\Empresa\Preguntas.HTML"><i class='bx bx-message'></i>Preguntas Frecuentes</a>
+
+    </div>
+    <div class="search-box">
+         </div>
+  </nav>
+
+  <div class="main">
+    <h1>Bienvenido a <span style="color: #1fa463;">Floral</span><span style="color: #00cdff;"> Fresh</span></h1>
+    <img src="logito.png" alt="Logo Floral Fresh" class="logo">
+  </div>
+
+</body>
+</html>
