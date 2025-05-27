@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Misión - Shampoo Natural</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('Fon.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .seccion {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .texto {
+      flex: 1;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5); /* Para que el texto se lea mejor */
+    }
+
+    .texto h1 {
+      font-size: 60px;
+      margin-bottom: 30px;
+      color: #fffde7;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .texto p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .resaltado {
+      font-weight: bold;
+      color: #ffe082;
+    }
+
+    .imagen {
+      flex: 1;
+      background: url('..\\Empresa\\mi.jpg.png') no-repeat center;
+      background-size: cover;
+      filter: brightness(0.95);
+    }
+
+    @media (max-width: 768px) {
+      .seccion {
+        flex-direction: column;
+      }
+
+      .imagen {
+        height: 300px;
+      }
+
+      .texto {
+        padding: 40px 20px;
+      }
+
+      .texto h1 {
+        font-size: 40px;
+      }
+
+      .texto p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="seccion">
+    <div class="texto">
+      <h1>Nuestra Misión</h1>
+      <p>Ofrecer productos de higiene que promuevan el bienestar tanto de <span class="resaltado">personas como de mascotas</span>, utilizando ingredientes <span class="resaltado">100% naturales</span>, respetuosos con el medio ambiente y seguros para todo tipo de piel y pelaje.</p>
+      <p>Nuestra empresa fue fundada en 2024 como parte de un proyecto escolar con una visión clara: cuidar la salud y la naturaleza al mismo tiempo. Desde entonces, nos hemos comprometido a crear un shampoo que brinde limpieza, frescura y tranquilidad a toda la familia, incluyendo a sus fieles compañeros peludos.</p>
+    </div>
+    <div class="imagen"></div>
+  </div>
+</body>
+</html>

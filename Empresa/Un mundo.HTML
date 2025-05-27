@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Un Mundo Mejor - Shampoo Natural</title>
+  <style>
+    @import url('Fon.jpg');
+
+    body {
+      margin: 0;
+      padding: 0 20px;
+      background-image: url('Fon.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #f0f0f0;
+      line-height: 1.7;
+      text-shadow: 1px 1px 4px #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 30px 0;
+      color: #3cb371; /* color vibrante,verde vivo */
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      animation: glow 2.5s ease-in-out infinite alternate;
+      max-width: 90%;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #0004ff, 0 0 20px #0004ff, 0 0 30px #0004ff, 0 0 40px #0004ff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffcd, 0 0 40px #00ffcd, 0 0 60px #00ffcd, 0 0 80px #00ffcd;
+      }
+    }
+
+    .text-block {
+      max-width: 850px;
+      margin: 0 auto 50px auto;
+      padding: 30px 40px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+      font-size: 1.15rem;
+      text-align: justify;
+    }
+
+    p {
+      margin-bottom: 22px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 18px;
+      list-style-type: disc;
+      margin-bottom: 22px;
+    }
+
+    ul li {
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      color: #ffa07a;
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+      .text-block {
+        padding: 20px 15px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Un Mundo Mejor con Nuestro Shampoo Natural</h1>
+  <div class="text-block">
+    <p>En nuestra empresa creemos firmemente que cuidar de ti y de tus mascotas puede ir de la mano con proteger nuestro planeta. Nuestro shampoo natural, elaborado con ingredientes como <span class="highlight">sábila, romero y aguacate</span>, no solo cuida la salud y bienestar de humanos y animales, sino que también contribuye al equilibrio del medio ambiente.</p>
+
+    <p>Estas son algunas de las formas en que nuestro producto y empresa ayudan a crear un mundo mejor:</p>
+
+    <ul>
+      <li><span class="highlight">Ingredientes 100% naturales:</span> Utilizamos plantas y extractos libres de químicos, evitando contaminantes que dañan ecosistemas y salud.</li>
+      <li><span class="highlight">Producción responsable:</span> Aplicamos procesos que reducen el consumo de agua y energía.</li>
+      <li><span class="highlight">Apoyo a comunidades locales:</span> Trabajamos con agricultores que cultivan sábila, romero y aguacate de manera orgánica y sostenible.</li>
+      <li><span class="highlight">Libre de pruebas en animales:</span> Garantizamos productos cruelty-free, respetando la vida y bienestar animal.</li>
+    </ul>
+
+    <p>Al elegir nuestro shampoo natural, estás tomando una decisión consciente para cuidar tu salud, la de tus mascotas y el planeta. Juntos podemos lograr un mundo mejor.</p>
+  </div>
+</body>
+</html>

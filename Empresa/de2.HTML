@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('Fon.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.5);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+    .producto {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .producto img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+    .producto-info {
+      flex: 1;
+    }
+    .producto h3 {
+      margin: 0 0 5px;
+    }
+    .producto p {
+      margin: 0 0 10px;
+    }
+    .producto input[type="number"] {
+      width: 60px;
+    }
+    button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.remove {
+      background-color: #dc3545;
+    }
+    .total {
+      text-align: right;
+      font-size: 1.2em;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .pago button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .pago ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .pago li {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .pago a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .pago a:hover {
+      text-decoration: underline;
+    }
+    .correo {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Carrito de Compras</h1>
+
+    <div class="producto" data-precio="75">
+      <img src="..\Empresa\pro1.png" alt="Shampoo Natural" />
+      <div class="producto-info">
+        <h3>Shampoo Natural</h3>
+        <p>Shampoo natural hecho de aguacate, sábila y romero. Contenido: 500 ml.</p>
+        <p><strong>$75.00 MXN</strong></p>
+        <input type="number" min="0" max="10" value="0" onchange="calcularTotal()" />
+        <button onclick="agregar(this)">Agregar</button>
+        <button class="remove" onclick="quitar(this)">Quitar</button>
+      </div>
+    </div>
+
+    <div class="producto" data-precio="49">
+      <img src="..\Empresa\d.jpg" alt="Jabón Antibacterial" />
+      <div class="producto-info">
+        <h3>Jabón Antibacterial</h3>
+        <p>Jabón líquido antibacterial. Elimina hasta el 99% de bacterias. Contenido: 500 ml.</p>
+        <p><strong>$49.00 MXN</strong></p>
+        <input type="number" min="0" max="10" value="0" onchange="calcularTotal()" />
+        <button onclick="agregar(this)">Agregar</button>
+        <button class="remove" onclick="quitar(this)">Quitar</button>
+      </div>
+    </div>
+
+    <div class="producto" data-precio="123">
+      <img src="..\Empresa\d1.jpg" alt="Shampoo de Manzana" />
+      <div class="producto-info">
+        <h3>Shampoo de Manzana</h3>
+        <p>Lava profundamente el cabello desde el cuero cabelludo hasta las puntas. Contenido: 500 ml.</p>
+        <p><strong>$123.00 MXN</strong></p>
+        <input type="number" min="0" max="10" value="0" onchange="calcularTotal()" />
+        <button onclick="agregar(this)">Agregar</button>
+        <button class="remove" onclick="quitar(this)">Quitar</button>
+      </div>
+    </div>
+
+    <div class="producto" data-precio="87">
+      <img src="..\Empresa\d2.jpg" alt="Shampoo Clásico" />
+      <div class="producto-info">
+        <h3>Shampoo Clásico</h3>
+        <p>Ayuda a combatir y tratar la caspa mientras limpia y alisa el cabello. Contenido: 500 ml.</p>
+        <p><strong>$87.00 MXN</strong></p>
+        <input type="number" min="0" max="10" value="0" onchange="calcularTotal()" />
+        <button onclick="agregar(this)">Agregar</button>
+        <button class="remove" onclick="quitar(this)">Quitar</button>
+      </div>
+    </div>
+
+    <div class="total">
+      Total: $<span id="total">0.00</span> MXN
+    </div>
+
+    <div class="pago">
+      <button onclick="mostrarOpciones()">Pagar</button>
+      <div id="opcionesPago" style="display: none;">
+        <p>Selecciona un método de pago:</p>
+        <ul>
+          <li><a href="https://www.oxxo.com/pagar" target="_blank">OXXO</a></li>
+          <li><a href="https://www.paypal.com/mx/home" target="_blank">PayPal</a></li>
+          <li><a href="https://www.mercadopago.com.mx/" target="_blank">Mercado Pago</a></li>
+          <li><a href="https://www.bbva.mx/personas/productos/cuentas/cuentas-bancarias.html" target="_blank">Transferencia Bancaria</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="correo">
+      <p>¿Tienes dudas? <a href="https://mail.google.com/mail/?view=cm&fs=1&to=floralfresh532@gmail.com" target="_blank">Envíanos un correo</a></p>
+    </div>
+  </div>
+
+  <script>
+    function agregar(btn) {
+      const input = btn.previousElementSibling;
+      if (parseInt(input.value) < 10) {
+        input.value = parseInt(input.value) + 1;
+        calcularTotal();
+      }
+    }
+
+    function quitar(btn) {
+      const input = btn.parentElement.querySelector("input");
+      if (parseInt(input.value) > 0) {
+        input.value = parseInt(input.value) - 1;
+        calcularTotal();
+      }
+    }
+
+    function calcularTotal() {
+      let total = 0;
+      const productos = document.querySelectorAll(".producto");
+      productos.forEach((producto) => {
+        const precio = parseFloat(producto.getAttribute("data-precio"));
+        const input = producto.querySelector("input");
+        let cantidad = parseInt(input.value);
+        if (isNaN(cantidad) || cantidad < 0) cantidad = 0;
+        if (cantidad > 10) cantidad = 10;
+        input.value = cantidad;
+        total += precio * cantidad;
+      });
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    function mostrarOpciones() {
+      const opciones = document.getElementById("opcionesPago");
+      opciones.style.display = opciones.style.display === "none" ? "block" : "none";
+    }
+
+    window.onload = calcularTotal;
+  </script>
+</body>
+</html>

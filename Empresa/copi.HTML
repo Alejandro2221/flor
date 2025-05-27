@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floral Fresh - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(135deg, #101820, #304352);
+      color: #fff;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .sidebar {
+      width: 260px;
+      background-color: #1f2d3d;
+      padding: 30px 20px;
+      box-shadow: 4px 0 15px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    .sidebar h2 {
+      font-weight: 700;
+      font-size: 28px;
+      color: #00ffc8;
+      text-align: center;
+    }
+
+    .menu a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #d2fefb;
+      transition: all 0.3s ease;
+    }
+
+    .menu a:hover {
+      background-color: #00ffc866;
+      transform: translateX(5px);
+    }
+
+    .menu i {
+      font-size: 20px;
+    }
+
+    .main {
+      flex: 1;
+      padding: 60px;
+      overflow-y: auto;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      width: 500px;
+      animation: pulse 4s infinite ease-in-out;
+      filter: drop-shadow(0 0 15px #00ffc8aa);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        height: auto;
+      }
+      .main {
+        padding: 20px;
+      }
+      .logo {
+        position: static;
+        display: block;
+        margin: 40px auto 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar fade-in">
+    <h2>Floral Fresh</h2>
+    <div class="menu">
+      <a href="#"><i class='bx bx-user'></i>¿Quiénes somos?</a>
+      <a href="#"><i class='bx bx-globe'></i>Un mundo mejor</a>
+      <a href="#"><i class='bx bx-bulb'></i>Innovación</a>
+      <a href="#"><i class='bx bx-file'></i>Políticas</a>
+      <a href="#"><i class='bx bx-target-lock'></i>Misión</a>
+      <a href="#"><i class='bx bx-show-alt'></i>Visión</a>
+      <a href="#"><i class='bx bx-diamond'></i>Valores</a>
+      <a href="#"><i class='bx bx-envelope'></i>Contacto</a>
+      <a href="#"><i class='bx bx-map'></i>Visítanos</a>
+      <a href="#"><i class='bx bx-store'></i>Productos / Servicios</a>
+      <a href="#"><i class='bx bx-book'></i>Historia</a>
+      <a href="#"><i class='bx bx-image'></i>Logotipo</a>
+      <a href="#"><i class='bx bx-cart'></i>Carrito de compras</a>
+    </div>
+  </div>
+
+  <div class="main fade-in">
+    <h1>Bienvenido a <span style="color: #1fa463;">Floral</span><span style="color: #00cdff;"> Fresh</span></h1>
+    <img src="logito.png" alt="Logo Floral Fresh" class="logo">
+  </div>
+
+</body>
+</html>

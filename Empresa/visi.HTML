@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visión - Shampoo Natural</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('Fon.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      animation: fondoZoom 25s infinite alternate ease-in-out;
+    }
+
+    @keyframes fondoZoom {
+      0% {
+        background-size: 100%;
+      }
+      100% {
+        background-size: 110%;
+      }
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 60px;
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #ffffff;
+      text-align: center;
+      text-shadow: 3px 3px 6px #000, 0 0 10px #56ffc7;
+      animation: aparecer 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    p {
+      margin: 40px auto;
+      max-width: 80%;
+      font-size: 22px;
+      line-height: 1.7;
+      text-align: justify;
+      animation: aparecer 2.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .resaltado {
+      font-family: 'Courier New', monospace;
+      color: #ffe29a;
+      font-size: 24px;
+      background: rgba(0,0,0,0.3);
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    @keyframes aparecer {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .imagen {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      animation: aparecer 3s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .imagen img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #a0eec0;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nuestra Visión</h1>
+
+  <p>Ser reconocidos como líderes en el cuidado y bienestar de <span class="resaltado">animales y humanos</span>, ofreciendo productos naturales, libres de químicos dañinos y comprometidos con la salud y el medio ambiente.</p>
+
+  <p>Queremos construir una comunidad consciente que valore la importancia de usar productos seguros, sostenibles y efectivos, promoviendo un estilo de vida más saludable y respetuoso con la naturaleza.</p>
+
+  <p>Nos esforzamos día a día para innovar y crecer, llevando nuestro shampoo natural a más hogares y corazones, y fomentando el amor y respeto por todas las formas de vida.</p>
+
+  <div class="imagen">
+    <img src="..\Empresa\vi.png" alt="Visión">
+  </div>
+</body>
+</html>

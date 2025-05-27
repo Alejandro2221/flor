@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shampoo Natural - Producto y Servicio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('Fon.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      animation: fondoZoom 20s infinite alternate ease-in-out;
+    }
+
+    @keyframes fondoZoom {
+      0% { background-size: 100%; }
+      100% { background-size: 110%; }
+    }
+
+    h1 {
+      font-size: 58px;
+      text-align: center;
+      margin: 60px 0 30px 0;
+      color: #ffffff;
+      text-shadow: 3px 3px 6px #000, 0 0 12px #5cffb2;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    .producto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      animation: fadeIn 3s ease forwards;
+      opacity: 0;
+    }
+
+    .producto img {
+      width: 300px;
+      border-radius: 20px;
+      border: 3px solid white;
+      box-shadow: 0 0 25px #9affc7;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .producto img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #a0eec0;
+    }
+
+    .descripcion {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 750px;
+      font-size: 20px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .precio {
+      font-size: 26px;
+      color: #ffe29a;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .info-envio {
+      max-width: 800px;
+      margin: 50px auto 80px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #a0eec0;
+      font-size: 20px;
+      text-align: center;
+      animation: fadeInGlow 3.5s ease forwards;
+      box-shadow: 0 0 30px #a0eec0;
+      color: #e7ffe9;
+    }
+
+    .info-envio strong {
+      color: #ffe29a;
+    }
+
+    .info-envio::before {
+      content: "🚚 SERVICIO DISPONIBLE 🚚";
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #5cffb2;
+      margin-bottom: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInGlow {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Shampoo Natural</h1>
+
+  <div class="producto">
+    <img src="pro.png" alt="Shampoo Natural">
+    <div class="descripcion">
+      Nuestro shampoo natural está hecho de <strong>aguacate, sábila y romero</strong>. Esta combinación ayuda a fortalecer el cabello, dejándolo sano, suave y sedoso. También proporciona una sensación de frescura y es ideal para cuidar el pelaje de <strong>mascotas</strong>.<br><br>
+      Está libre de químicos, lo que lo hace <strong>seguro para humanos y mascotas</strong>. Es perfecto para quienes buscan una opción natural y efectiva para el cuidado personal y animal.
+      <div class="precio">😱¡Su costo es de $75 MXN!😱</div>
+    </div>
+  </div>
+
+  <div class="info-envio">
+    Puedes pagar en <strong>tienda</strong> o <strong>en línea</strong>. <br>
+    También puedes <strong>recoger el producto en tienda</strong> o solicitar <strong>envío a domicilio</strong> a través de <em>Mandado</em> (con costo adicional).
+  </div>
+
+</body>
+</html>
